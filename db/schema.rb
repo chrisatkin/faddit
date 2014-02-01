@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140131230255) do
+ActiveRecord::Schema.define(version: 20140201011630) do
 
   create_table "fads", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_ud"
+    t.integer  "user_id"
     t.string   "title"
     t.string   "url"
   end
