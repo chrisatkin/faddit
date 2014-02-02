@@ -27,7 +27,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem 'bootstrap-sass', '~> 3.1.0'
+gem 'foundation-rails'
 gem 'devise'
 gem 'acts_as_votable'
 

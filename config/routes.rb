@@ -1,7 +1,9 @@
 Faddit::Application.routes.draw do
-  root to: 'pages#index'
+  get "links/index"
+  get "links/show"
+  root to: 'links#index'
   resources :pages
-  resources :fads
+  resources :links
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

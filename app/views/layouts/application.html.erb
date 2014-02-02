@@ -1,26 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Faddit</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<%# user is logged in, show log out link %>
-  <% if current_user.present? %>
-    <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
-  <%# user is not logged in, show signup and login links %>
-  <% else %>
-    <%= link_to 'Sign In', new_user_session_path %> |
-    <%= link_to 'Register Now!', new_user_registration_path %>
-<% end %>
+    <title>Faddit <%= "| #{yield(:title)}" if content_for?(:title) %></title>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
 
-<%= yield %>
+  <%= render 'layouts/header' %>
 
-</body>
+  <body>
+
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+  </body>
 </html>
