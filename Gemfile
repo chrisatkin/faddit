@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'foundation-rails'
 gem 'devise'
 gem 'acts_as_votable'
+gem 'friendly_id'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -39,6 +40,7 @@ end
 group :development do
 	gem 'better_errors'
 	gem 'binding_of_caller'
+	gem 'quiet_assets'
 end
 
 # Use ActiveModel has_secure_password

@@ -11,11 +11,20 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <%= render 'layouts/header' %>
+  <body class="<%= params[:controller] %>">
+    <div class="row"><%= render 'header' %></div>
+   
+      <div class="row">
+        <div class="nine columns push-three">
+          <%= render 'categories' if @categories %>
+          <%= yield %>
+        </div>
 
-  <body>
+        <div class="three columns pull-nine">
+            SIDE
+        </div>
+      </div>
 
-    <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

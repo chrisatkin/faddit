@@ -1,3 +1,12 @@
-<% @links.each do |link| %>
-	<h3><%= link_to link.title, link.url %></h3>
-<% end %>
+<section id="links">
+	<ul>
+	<% @links.each do |link| %>
+		<li>
+			<h3><%= link_to link.title, link.url %></h3>
+			<p>
+				Submitted by <%= link.user.username %> at <%= link.created_at.to_formatted_s %>. <%= link_to 'See more', link_view_path(link) %>
+			</p>
+		</li>
+	<% end %>
+	</ul>
+</section>

@@ -1,0 +1,8 @@
+<% if @categories %>
+<dl class="sub-nav">
+	<dt>Category</dt>
+	<% @categories.each do |category| %>
+	<dd><%= link_to category.name, category_view_path(category) %>
+	<% end %>
+</dl>
+<% end %>
