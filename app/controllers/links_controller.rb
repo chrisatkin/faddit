@@ -3,12 +3,11 @@ class LinksController < ApplicationController
   	@links = Link.all
   	@categories = Category.all
 
-  	respond_to do |format|
-  		format.html
-  		format.json
-  	end
+    respond_to :html, :json
   end
 
   def show
+    @link = Link.friendly.find(params[:name])
+    respond_to :html
   end
 end

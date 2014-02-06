@@ -31,6 +31,7 @@ gem 'foundation-rails'
 gem 'devise'
 gem 'acts_as_votable'
 gem 'friendly_id'
+gem 'haml-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -41,6 +42,7 @@ group :development do
 	gem 'better_errors'
 	gem 'binding_of_caller'
 	gem 'quiet_assets'
+	gem 'pry'
 end
 
 # Use ActiveModel has_secure_password
