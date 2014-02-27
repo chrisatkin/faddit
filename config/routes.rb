@@ -1,6 +1,7 @@
 Faddit::Application.routes.draw do
   get '/r/:title', to: 'categories#show', as: 'category_view'
   get '/c/:name', to: 'links#show', as: 'link_view'
+  get '/submit', to: 'links#new', as: 'submit'
 
   root to: 'links#index'
   resources :pages
